@@ -1,0 +1,33 @@
+<?php
+// require($this->getDeclaredDir()."/Lib/vendor/autoload.php");
+
+// use \Michelf\Markdown;
+// $t->addDiv()->Content = Markdown::defaultTransform("Salut le marking down de **test**");
+
+$doc->Title = "WebGL demonstration on MAC";
+$t->ClearChilds();
+$t["class"]="fit";
+// $t->addWebGLApp()->setClass("fit");
+
+$t->addWebGlSurface()->setClass("fit");
+
+igk_doc_load_temp_script($doc, array( 
+"callback"=>array( new IGKScriptLoader($ctrl, "/app_webgl/webgl.js?v=".IGK_VERSION), "Load")
+), "igk-webgl");
+
+
+//demo resources
+$t->addImg()->setId("text")->setClass("dispn")->setSrc($this->getDataDir()."/R/Img/texture.png");
+
+
+
+$t->addJSView()->Content = <<<EOF
+if (/FxiOS/.test(window.navigator.appVersion)){
+    igk.dom.body().addClass("FxiOS");  
+	var s = "body.FxiOS {height: "+window.outerHeight+"px !important}";	 
+	igk.css.appendRule(s);
+} 
+EOF;
+
+//igk_wln_e((new ReflectionFunction("igk_html_node_jsview"))->getFileName());
+

@@ -1,0 +1,14 @@
+{
+     "name":"igkdev/app_dev",
+     "require": {
+         "php":">=7.2",
+         "michelf/php-markdown":"1.9"
+     },
+     "authors": [
+         {
+             "name":"C.A.D BONDJE DOUE",
+             "email":"bondje.doue@igkdev.be"
+         }
+     ]
+
+}

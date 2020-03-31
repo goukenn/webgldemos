@@ -1,0 +1,11 @@
+<gkds>
+  <Project>
+    <SurfaceType>IconSurface</SurfaceType>
+  </Project>
+  <Documents>
+    <LayerDocument PixelOffset="None" BackgroundTransparent="True" Width="256" Height="128" Id="LayerDocument_918761">
+      <Layer Id="Layer_17003755">
+      </Layer>
+    </LayerDocument>
+  </Documents>
+</gkds>
